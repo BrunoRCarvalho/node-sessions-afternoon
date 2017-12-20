@@ -43,7 +43,9 @@ class Search extends Component {
         <div id="Search__child">
           <input id="Search__input" placeholder="Search by type of swag.." onKeyDown={ this.search } onChange={ this.handleChange } />
           <div id="Search__cartContainer" onClick={ this.showCart }>
-            <span id="Search__cartNumber"> { cart.length } </span>
+            { cart.length ? <span id="Search__cartNumber"> { cart.length } </span> 
+            : null }
+            
             <CartIcon id="Search__cartIcon" />
           </div>
         </div>
